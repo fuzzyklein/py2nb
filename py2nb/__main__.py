@@ -1,7 +1,13 @@
+from pathlib import Path
+import pdb
+import site
+import sys
 from traceback import print_exc
 from warnings import warn
 
-from hw.hw import HelloWorld
+# site.addsitedir(str(Path(__file__).parent))
+# pdb.set_trace()
+from py2nb.py2nb import Py32JNb
 
 def main():
     """ main()
@@ -10,7 +16,7 @@ def main():
     """
     # print("Hello, World!")
     try:
-        HelloWorld().run()
+        Py32JNb().run()
     except:
         print_exc()
         exit(1)

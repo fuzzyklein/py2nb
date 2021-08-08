@@ -8,7 +8,7 @@ site.addsitedir(str(Path(__file__).parent))
 from program import Program
 from driver import Driver
 
-class HelloWorld(Program):
+class Py32JNb(Program):
     def __init__(self, settings=None):
         super().__init__()
 
@@ -22,3 +22,5 @@ class HelloWorld(Program):
         if self.settings['testing']:
             Driver(self.settings).cmdloop()
         if self.settings['debug']: pdb.set_trace()
+
+__all__ = ['Py32JNb']
